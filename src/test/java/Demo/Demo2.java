@@ -8,19 +8,24 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Demo1 {
+public class Demo2 {
 
-	
-	@Test(groups="sanity")
-	public void demo1()
+	@Test(groups="regression")
+	public void demo2()
 	{
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.google.com/");
-		System.out.println("Ram-Krishna-Hari!");
+		System.out.println("Om namh shivaay!");
 		driver.close();
 	}
+	
+	
+	@Test
+	public void display()
+	{
+		System.out.println("only one test script is automated");
+	}
 }
-
